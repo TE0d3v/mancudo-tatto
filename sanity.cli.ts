@@ -12,4 +12,11 @@ export default defineCliConfig({
      */
     autoUpdates: true,
   },
+  typegen: {
+    enabled: true,
+    path: '../mancudo/src/**/*.{ts,tsx,js,jsx}',
+    schema: 'schema.json',
+    generates: '../mancudo/sanity.types.ts',
+    overloadClientMethods: true,
+  },
 })
